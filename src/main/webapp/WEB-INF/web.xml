@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Health Logger</display-name>
+
+    <!-- Login & Logout -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Patient Management -->
+    <servlet>
+        <servlet-name>AddPatientServlet</servlet-name>
+        <servlet-class>com.controller.AddPatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddPatientServlet</servlet-name>
+        <url-pattern>/addPatient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdatePatientServlet</servlet-name>
+        <servlet-class>com.controller.UpdatePatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePatientServlet</servlet-name>
+        <url-pattern>/updatePatient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdatePatientFormServlet</servlet-name>
+        <servlet-class>com.controller.UpdatePatientFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePatientFormServlet</servlet-name>
+        <url-pattern>/updatePatientForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeletePatientServlet</servlet-name>
+        <servlet-class>com.controller.DeletePatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletePatientServlet</servlet-name>
+        <url-pattern>/DeletePatientServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchPatientServlet</servlet-name>
+        <servlet-class>com.controller.SearchPatientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchPatientServlet</servlet-name>
+        <url-pattern>/searchPatient</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewPatientsServlet</servlet-name>
+        <servlet-class>com.controller.ViewPatientsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewPatientsServlet</servlet-name>
+        <url-pattern>/viewPatients</url-pattern>
+    </servlet-mapping>
+
+    <!-- Vitals -->
+    <servlet>
+        <servlet-name>AddVitalsServlet</servlet-name>
+        <servlet-class>com.controller.AddVitalsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddVitalsServlet</servlet-name>
+        <url-pattern>/addVitals</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VitalFormServlet</servlet-name>
+        <servlet-class>com.controller.VitalFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VitalFormServlet</servlet-name>
+        <url-pattern>/vitalForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManageVitalsServlet</servlet-name>
+        <servlet-class>com.controller.ManageVitalsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManageVitalsServlet</servlet-name>
+        <url-pattern>/manageVitals</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteVitalServlet</servlet-name>
+        <servlet-class>com.controller.DeleteVitalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteVitalServlet</servlet-name>
+        <url-pattern>/DeleteVitalServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ExportVitalsServlet</servlet-name>
+        <servlet-class>com.controller.ExportVitalsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExportVitalsServlet</servlet-name>
+        <url-pattern>/exportVitals</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewVitalsAlertsServlet</servlet-name>
+        <servlet-class>com.controller.ViewVitalsAlertsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewVitalsAlertsServlet</servlet-name>
+        <url-pattern>/ViewVitalsAlertsServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
