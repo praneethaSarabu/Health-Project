@@ -127,6 +127,27 @@ public class VitalsDAO {
 
 		return alertVitals;
 	}
+	
+	public static boolean addVitalsViaProcedure(Vitals v) {
+	    boolean status = false;
+	    try (Connection conn = DBUtil.getConnection()) {
+	    	
+	    	System.out.println("JDBC user = " + conn.getMetaData().getUserName());
+	        String sql = "{ call log_vitals(?, ?, ?, ?) }";
+	        CallableStatement cs = conn.prepareCall(sql);
+
+	        cs.setInt(1, v.getPatientId());
+	        cs.setInt(2, v.getBpHigh());
+	        cs.setInt(3, v.getBpLow());
+	        cs.setInt(4, v.getSpo2());
+
+	        cs.execute();
+	        status = true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return status;
+	}
 
 
 }

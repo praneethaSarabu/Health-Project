@@ -17,7 +17,7 @@ public class AddVitalsServlet extends HttpServlet {
 		v.setBpLow(Integer.parseInt(req.getParameter("bpLow")));
 		v.setSpo2(Integer.parseInt(req.getParameter("spo2")));
 
-		boolean success = VitalsDAO.addVitals(v);
+		boolean success = VitalsDAO.addVitalsViaProcedure(v);
 
 		if (success)
 			// res.sendRedirect("manageVitals.jsp?patientId=" + v.getPatientId());

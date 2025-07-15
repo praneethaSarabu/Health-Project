@@ -48,3 +48,43 @@ health-logger/
 │ └── web.xml # Servlet configuration
 ├── db-schema.sql # MySQL database schema
 ├── README.md
+
+
+
+# 🩺 Health Logger – Full Stack Medical Analysis Project
+
+This project tracks patients' vital signs (BP, SPO2), stores them in an Oracle database, and provides visual dashboards using Tableau.
+
+---
+
+## 💾 Oracle + Java Integration
+- Oracle 21c XE as backend DB
+- PL/SQL procedure `log_vitals`
+- Java servlets call PL/SQL using JDBC `CallableStatement`
+
+## 🧪 Python Analytics
+- Merged vitals.csv and patient.csv
+- Visualized SPO2 and BP trends
+- Grouped data by diagnosis and age
+
+## 📊 Tableau Dashboards
+- **Vitals Over Time**: BP High/Low & SPO2 by patient
+- **Diagnosis Summary**: Avg BP High & Avg SPO2 by diagnosis
+
+🔗 [Published Dashboard](https://public.tableau.com/app/profile/praneetha.sarabu/viz/HealthLoggerDashboard/Dashboard1?publish=yes)
+
+---
+
+## 🛠️ Tech Stack
+- Java, Servlets, JDBC
+- Oracle 21c XE (SQL Developer & VSCode)
+- Tableau Public
+- Python (pandas, matplotlib)
+
+---
+
+## 💡 Features
+- Add/view vitals per patient
+- Automatic time tracking via SYSDATE
+- Diagnosis filtering in visual dashboards
+

@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/health_logger";
-    private static final String USER = "root"; 
-    private static final String PASS = "NV24@Phkri"; 
+    private static final String URL = "jdbc:oracle:thin:@localhost:1522:XE"; // Oracle default port
+    private static final String USER = "system"; // use your Oracle username
+    private static final String PASS = "newpassword123"; // replace with your real Oracle password
 
     public static Connection getConnection() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        Class.forName("oracle.jdbc.driver.OracleDriver");
         return DriverManager.getConnection(URL, USER, PASS);
     }
 }
