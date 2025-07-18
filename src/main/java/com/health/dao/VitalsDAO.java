@@ -26,7 +26,7 @@ public class VitalsDAO {
 	public static List<Vitals> getVitalsByPatientId(int patientId) {
 		List<Vitals> list = new ArrayList<>();
 		try (Connection conn = DBUtil.getConnection()) {
-			String sql = "SELECT v.*, p.name, p.phone FROM vitals v JOIN patients p ON v.patient_id = p.id WHERE v.patient_id = ?";
+			String sql = "SELECT v.*, p.name, p.phone FROM vitals v JOIN patient p ON v.patient_id = p.id WHERE v.patient_id = ?";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, patientId);
 			ResultSet rs = stmt.executeQuery();
