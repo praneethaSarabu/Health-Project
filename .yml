@@ -1,0 +1,49 @@
+
+---
+
+## 🧠 Oracle Integration (PL/SQL + JDBC)
+
+- Used Oracle 21c XE as backend
+- Created `log_vitals` stored procedure
+- Java uses `CallableStatement` to call procedure via JDBC
+- Vitals are auto-recorded with `SYSDATE` timestamp
+
+---
+
+## 📈 Data Analysis
+
+- Combined patient and vitals data using Python
+- Used Pandas/Seaborn for EDA
+- Identified anomalies based on diagnosis and age
+
+---
+
+## 📊 Tableau Dashboard
+
+- BP High/Low, SPO2 over time by patient
+- Diagnosis-wise vitals aggregation
+
+🔗 [View Live Dashboard](https://public.tableau.com/app/profile/praneetha.sarabu/viz/HealthLoggerDashboard/Dashboard1)
+
+---
+
+## ✅ JUnit Testing (Optional)
+
+- Added `VitalsDAOTest.java` for unit testing DAO layer
+- Validated procedure integration and CRUD logic
+
+---
+
+## 💡 What's Unique?
+
+- End-to-end integration of Oracle DB with a Java-based web app
+- Full data pipeline: Form → Procedure → Database → Dashboard
+- Real-time health monitoring + clinical analysis
+
+---
+
+## 📬 Contact
+
+📧 praneethasarabu@example.com  
+🔗 [GitHub Repo](https://github.com/praneethaSarabu/Health-Project)  
+🔗 [LinkedIn](https://www.linkedin.com/in/praneetha-sarabu)
