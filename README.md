@@ -1,40 +1,42 @@
-# 🩺 Health Logger Web Application
+# 🩺 Health Logger – Full Stack Web + Data Analysis Project
 
-A web-based patient health management system built using **Java**, **JSP**, **Servlets**, and **JDBC**, allowing doctors to record, view, and manage patient vitals.
+A full-stack health monitoring web application that enables doctors to manage patients and record vital signs like BP and SPO2. It integrates Oracle PL/SQL procedures with Java and visualizes trends using Python and Tableau.
 
 ---
 
-## 👨‍💻 Developed By
+## 👩‍💻 Developed by
 **Praneetha Sarabu**
 
 ---
 
-## 📌 Features
+## 🚀 Key Features
 
-- 🔐 **Doctor Login**
-- 👥 **Patient Management**: Add, update, delete patient records
-- 📊 **Vitals Logging**: Record and view vitals like BP (low/high), SPO2
-- 📈 **Vitals Graph**: Line charts for patient health monitoring using Chart.js
-- ⚠ **Alerts**: View abnormal vitals
-- 📄 **Export Vitals** as report
-- ✅ Session-based authentication
-- 💾 MySQL database integration
+- 🔐 **Doctor Login** with session-based authentication
+- 👨‍⚕️ **Patient Management**: Add, edit, delete patient records
+- 📋 **Vitals Logging**: Record and view BP (high/low), SPO2
+- 📊 **Vitals Graph**: Visualize vitals over time using Chart.js
+- ⚠ **Abnormal Alerts**: Highlight vitals below safe threshold
+- 📤 **Export to CSV** for analysis
+- 📈 **Tableau Dashboards** for diagnosis trends and health summaries
 
 ---
 
-## 💻 Technologies Used
+## 🔧 Technologies Used
 
-| Layer        | Technology              |
-|--------------|--------------------------|
-| Frontend     | JSP, HTML, CSS, Chart.js |
-| Backend      | Java (Servlets, JSP)     |
-| Database     | MySQL                    |
-| Server       | Apache Tomcat            |
-| IDE          | Eclipse IDE              |
+| Layer       | Technologies                                  |
+|-------------|-----------------------------------------------|
+| Frontend    | JSP, HTML, CSS, Chart.js                      |
+| Backend     | Java (Servlets, JSP), JDBC                    |
+| Database    | Oracle 21c XE (PL/SQL), MySQL (JDBC)          |
+| Analytics   | Python (Pandas, Matplotlib, Seaborn)          |
+| Dashboard   | Tableau Public                                |
+| Server      | Apache Tomcat (v9)                            |
+| IDE/Tools   | Eclipse IDE, VS Code, Git, GitHub             |
 
 ---
 
 ## 🗂 Project Structure
+
 health-logger/
 ├── src/ # Java source code (Model, DAO, Controllers)
 │ ├── com.health.model
@@ -48,43 +50,3 @@ health-logger/
 │ └── web.xml # Servlet configuration
 ├── db-schema.sql # MySQL database schema
 ├── README.md
-
-
-
-# 🩺 Health Logger – Full Stack Medical Analysis Project
-
-This project tracks patients' vital signs (BP, SPO2), stores them in an Oracle database, and provides visual dashboards using Tableau.
-
----
-
-## 💾 Oracle + Java Integration
-- Oracle 21c XE as backend DB
-- PL/SQL procedure `log_vitals`
-- Java servlets call PL/SQL using JDBC `CallableStatement`
-
-## 🧪 Python Analytics
-- Merged vitals.csv and patient.csv
-- Visualized SPO2 and BP trends
-- Grouped data by diagnosis and age
-
-## 📊 Tableau Dashboards
-- **Vitals Over Time**: BP High/Low & SPO2 by patient
-- **Diagnosis Summary**: Avg BP High & Avg SPO2 by diagnosis
-
-🔗 [Published Dashboard](https://public.tableau.com/app/profile/praneetha.sarabu/viz/HealthLoggerDashboard/Dashboard1?publish=yes)
-
----
-
-## 🛠️ Tech Stack
-- Java, Servlets, JDBC
-- Oracle 21c XE (SQL Developer & VSCode)
-- Tableau Public
-- Python (pandas, matplotlib)
-
----
-
-## 💡 Features
-- Add/view vitals per patient
-- Automatic time tracking via SYSDATE
-- Diagnosis filtering in visual dashboards
-
